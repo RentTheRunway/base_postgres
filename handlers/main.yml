@@ -9,6 +9,6 @@
   become: yes
   service: name=postgresql-{{ base_postgres_m }} state=restarted
 
-#- name: 'restart iptables'
-#  become: yes
-#  service: name=iptables state=restarted
+- name: 'restart iptables'
+ become: yes
+ service: name=iptables state=restarted

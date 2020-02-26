@@ -1,7 +1,18 @@
 PostgreSQL Master/Slave
 =========
 
-PostgreSQL 9.4 on one or two RHEL/Centos boxes.
+Preface
+------------
+Note: This is a fork off of bbaassssiiee.base_postgres role, from ansible galaxy
+https://github.com/bbaassssiiee/base_postgres/
+This role is used to ansibilize our SonarQube instance (sonarqube01.m.dfw.rtrdc.net/).
+We have forked it off to be stored in-house for a couple reasons:
+# There is a task that is commented out for some reason, `restart iptables`. This can cause the playbook to error out, since other tasks still invoke it.
+# It has been archived and migrated to dockpack.base_postgres
+# We also want to have more control over the configurations going forward
+------------
+
+PostgreSQL 9.6 on one or two RHEL/Centos boxes.
 
 Requirements
 ------------
